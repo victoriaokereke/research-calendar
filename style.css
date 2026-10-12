@@ -1,0 +1,178 @@
+/* 
+body {
+    background-color: #f3f3f3;
+    background-size: cover;
+    background-position: center;
+    font-family: "Isometra", serif;
+    font-size: 48px;
+} */
+@font-face {
+    font-family: "InterT";
+    src: url("../fonts/Inter_Tight/InterTight-Variable.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #f3f3f3;
+    font-family: "InterT", serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+#second-heading-banner {
+    display: flex; 
+    margin: 20px 20px 20px 20px;
+    /* padding: 10px 20px 20px 20px; */
+    gap: 10px;
+}
+
+#menu {
+    border-width: 0px;
+    background-color: #f3f3f3;
+}
+
+.todays-date {
+    border-width: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: inherit;
+    background-color: rgb(0, 140, 255);
+}
+
+
+.todays-weekday {
+    padding: 0px;
+    margin: 0px;
+}
+
+.todays-day {
+    padding: 0px;
+    margin: 0px;
+}
+
+.days-of-the-week-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 20px 0px 20px;
+    padding:0px;
+    border-width: 1px;
+}
+
+
+.days-of-the-week {
+    border-width: 0px;
+    margin: 0px;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: inherit;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+}
+
+
+.day-of-the-week {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    border-radius: 20px;
+}
+
+
+.weekday {
+    font-family: inherit;
+    margin: 0px;
+    padding: 0px;
+    font-size: 9px;
+    font-weight:600;
+    color: #2c2c2c;
+}
+
+
+.day {
+    font-family: inherit;
+    font-weight:600;
+    color: #2c2c2c;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+#monthly-view {
+    background: #f3f3f3;
+    border-width: 0px;
+    font-size: 12px;
+    padding-bottom: 5px;
+    line-height: 1.5px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.arrow {
+    padding-right: 0px;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+#month {
+    font-size: 20px;
+    font-weight: 500;
+    margin:0px;
+    padding-top: 10px;
+    padding-bottom: 10px;  
+    padding-left: 3px;
+}
+
+
+.time-oclock {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 2px; 
+    margin: 10px 20px 0px 20px;
+}
+.time-row {
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.time-row p {
+    font-size: 12px;
+    /* border-bottom: 0.1px solid #2c2c2c; */
+    margin: 0px;
+    width: 50px;
+}
+
+.hour-line {
+    flex: 1;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+
+.day.active-day {
+    background-color: rgb(223, 15, 1);
+    color: white;
+}

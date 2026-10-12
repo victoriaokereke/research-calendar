@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang = "en-GB">
+    <head>
+        <meta charset= "UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Research calendar app</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+    <body>
+        <div id= "second-heading-banner">
+            <button id= "menu" type= "button">
+                <svg class="menu-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="currentColor"
+                width="20"
+                height="20">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+            </button>
+            <button id = "monthly-view" type= "button">
+                <p id= "month">August</p>
+                <svg class="arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="4"
+                stroke="currentColor"
+                width="15"
+                height="15">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+
+            </button>
+        </div>
+        <div class= "days-of-the-week-container">
+            <div class="back-to-today">
+                <button class="todays-date" type="button">
+                    <svg class= "back-to-day"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#f3f3f3">
+                    <path d="M320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/>
+                    </svg>
+                    <!-- <p class="todays-weekday">MON</p>
+                    <p class="todays-day">12</p> -->
+                </button>
+            </div>
+            <div class="days-of-the-week">
+                <button class="day-of-the-week" type="button">
+                    <p class="weekday">MON</p>
+                    <p class="day">12</p>
+                </button>
+                <button class="day-of-the-week" type="button">
+                    <p class="weekday">TUE</p>
+                    <p class="day active-day">13</p>
+                </button>
+                <button class="day-of-the-week" type="button">
+                    <p class="weekday">WED</p>
+                    <p class="day">14</p>
+                </button> 
+                <button class="day-of-the-week" type="button">
+                    <p class="weekday">THUR</p>
+                    <p class="day">15</p>
+                </button>
+                <button class="day-of-the-week" type="button">
+                    <p class="weekday">FRI</p>
+                    <p class="day">16</p>
+                </button>
+                <button class="day-of-the-week" type="button">
+                    <p class="weekday">SAT</p>
+                    <p class="day">17</p>
+                </button> 
+                <button class="day-of-the-week" type="button">
+                    <p class="weekday">SUN</p>
+                    <p class="day">18</p>
+                </button> 
+            </div>
+        </div>
+        <div id="main-view-section-daily">
+            <div class="time-oclock">
+                <div class="time-row">
+                    <p>12 am</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>1 am</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>2 am</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>3 am</p> 
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>4 am</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>5 am</p> 
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>6 am</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>7 am</p> 
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>8 am</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>9 am</p> 
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>10 am</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>11 am</p>
+                    <div class="hour-line"></div> 
+                </div>
+                <div class="time-row">
+                    <p>12 pm</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>1 pm</p> 
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>2 pm</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>3 pm</p> 
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>4 pm</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>5 pm</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>6 pm</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>7 pm</p>
+                    <div class="hour-line"></div> 
+                </div>
+                <div class="time-row">
+                    <p>8 pm</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>9 pm</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>10 pm</p>
+                    <div class="hour-line"></div>
+                </div>
+                <div class="time-row">
+                    <p>11 pm</p> 
+                    <div class="hour-line"></div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js" defer></script>
+    </body>
+</html>
