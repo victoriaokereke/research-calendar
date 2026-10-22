@@ -1,6 +1,6 @@
 const month = document.querySelector("#month")
 const weekDay = document.querySelectorAll(".weekday")
-const date = document.querySelectorAll(".day")
+const dates = document.querySelectorAll(".day")
 const currentDay = new Date()
 
 
@@ -27,24 +27,31 @@ const weekRange = `${monday.toDateString()} - ${sunday.toDateString}`
 let visibleDate = new Date(currentDay)
 let weekDates = []
 
+
 function newWeekUpdate() {
     weekDates = []
     for (let i = 0; i < 7; i++) {
     
     const weekDate = new Date(monday)
     weekDate.setDate(monday.getDate() + i) // set monday's date
-    date[i].textContent = weekDate.getDate() // insert the day of the month for the week
+    dates[i].textContent = weekDate.getDate() // insert the day of the month for the week
     
     weekDates.push(weekDate)
 
-    date[i].classList.remove("active-day")
+    dates[i].classList.remove("active-day")
     if (weekDate.toDateString() === currentDay.toDateString()) {
-        date[i].classList.add("active-day")
+        dates[i].classList.add("active-day")
     }
 
-    date[i].classList.remove("visible-active-day")
+    dates[i].classList.remove("visible-active-day")
     if (weekDate.toDateString() === currentDay.toDateString() && visibleDate.toDateString() === weekDate.toDateString()) {
-        date[i].classList.add("visible-active-day")
+        dates[i].classList.add("visible-active-day")
+    }
+
+    dates[i].classList.remove("visible-day")
+    if (weekDate.toDateString() === visibleDate.toDateString() ) {
+        dates[i].classList.add("visible-day")
+        month.textContent = monthLabels[visibleDate.getMonth()]
     }
     }
 }
@@ -76,7 +83,7 @@ const calendarDayObserver = new IntersectionObserver(trackVisibleDay)
 calendarDayObserver.observe(calendarDay)
 
 
-
+// observer for each new day timeline
 const observer = new IntersectionObserver(createNewDayTimelines)
 observer.observe(topSentinel)
 observer.observe(bottomSentinel)
@@ -138,6 +145,13 @@ function createNewDayTimelines(entries) {
 
 function trackVisibleDay(entries) {
     entries.forEach(entry => {
+        if (
+            entry.isIntersecting && weekDates.some(weekDate =>
+                entry.target.dataset.date === weekDate.toDateString()
+            )) {
+        visibleDate = new Date(entry.target.dataset.date)
+        newWeekUpdate()
+            }
 
         if (
             entry.isIntersecting && !weekDates.some(weekDate =>
@@ -148,12 +162,25 @@ function trackVisibleDay(entries) {
             monday.setDate((visibleDate.getDate() - (visibleDate.getDay() + 6) % 7)) // set it to monday of the week
             newWeekUpdate()
             }
+        
         // console.log(visibleDate)
         // console.log(new Date(entry.target.dataset.date))  
        
 })
 }
-
+function returnToCurrentDay() {
+    const allTheDays = mainViewContainer.querySelectorAll(".calendar-day")
+    allTheDays.forEach(day => {
+        if (day.dataset.date === currentDay.toDateString()) {
+            day.scrollIntoView({behavior: "smooth", block: "start"})
+            console.log("back to today - clicked!")
+        }
+    }
+    )
+}
+const event = new MouseEvent("click")
+const backToToday = document.querySelector(".todays-date")
+backToToday.addEventListener("click", returnToCurrentDay)
 
 
 
