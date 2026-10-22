@@ -178,7 +178,7 @@ function returnToCurrentDay() {
     }
     )
 }
-const event = new MouseEvent("click")
+
 const backToToday = document.querySelector(".todays-date")
 backToToday.addEventListener("click", returnToCurrentDay)
 
