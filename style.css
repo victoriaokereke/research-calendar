@@ -24,6 +24,13 @@ body {
     background-color: transparent;
 }
 
+#menu:hover {
+    background-color: rgb(234, 234, 234);
+    border-radius: 20px;
+    /* padding: 6px 6px; */
+}
+
+
 .todays-date {
     border-width: 0px;
     width: 50px;
@@ -113,6 +120,17 @@ body {
 }
 
 
+.day-of-the-week:hover {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 20px;
+    background-color: rgb(225, 225, 225);
+}
+
+
+
+
+
 .weekday {
     font-family: inherit;
     margin: 0px;
@@ -153,6 +171,12 @@ body {
     font-family: inherit;
     font-weight: inherit;
     background-color: transparent;
+}
+
+#monthly-view:hover {
+    background-color: rgb(234, 234, 234);
+    border-radius: 8px;
+    /* padding: 4px 4px */
 }
 
 .arrow {
