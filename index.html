@@ -25,7 +25,7 @@
 
                 </button>
                 <button id = "monthly-view" type= "button">
-                    <p id= "month">August</p>
+                    <p id= "month-year">August 2026</p>
                     <svg class="arrow"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -42,7 +42,7 @@
             <div class= "days-of-the-week-container">
                 <div class="back-to-today">
                     <button class="todays-date" type="button">
-                        <svg class= "back-to-day"
+                        <svg class= "back-to-day-svg"
                         xmlns="http://www.w3.org/2000/svg"
                         height="24px"
                         viewBox="0 -960 960 960"
@@ -52,6 +52,18 @@
                         </svg>
                         <!-- <p class="todays-weekday">MON</p>
                         <p class="todays-day">12</p> -->
+
+                        <svg class= "back-to-day-svg-hover"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        height= "24px"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        stroke="#f3f3f3"
+                        stroke-width= "2px">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499" />
+                        </svg>
+
                     </button>
                 </div>
                 <div class="days-of-the-week">
@@ -93,7 +105,8 @@
                     <div class="time-oclock">
                         <div class="time-row">
                             <p class= "border-time">12 am</p>
-                            <div class="hour-line"></div>
+                            <div class="first-hour-line"></div>
+                            <p class= "border-date">6th Nov</p>
                         </div>
                         <div class="time-row">
                             <p>1 am</p>

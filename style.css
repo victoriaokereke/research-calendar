@@ -36,11 +36,35 @@ body {
     font-weight: inherit;
     background-color: rgb(0, 140, 255);
     /* box-shadow: 1px 1px 10px #2c2c2c; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-day-svg {
+    display: block;
+}
+
+.back-to-day-svg-hover {
+    display: none;
+
+}
+
+
+.todays-date:hover .back-to-day-svg {
+    display: none;
+}
+
+.todays-date:hover .back-to-day-svg-hover {
+    display: block;
+
 }
 
 .todays-date:hover {
     background-color: rgb(0, 118, 214);
+
 }
+
 
 .todays-weekday {
     padding: 0px;
@@ -137,7 +161,7 @@ body {
     padding-left: 4px;
 }
 
-#month {
+#month-year {
     font-size: 20px;
     font-weight: 600;
     margin:0px;
@@ -155,9 +179,12 @@ body {
     gap: 2px; 
     margin: 10px 20px 0px 20px;
 }
+
 .time-row {
     padding: 20px 20px 20px 20px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -184,10 +211,10 @@ body {
     color: white;
 }
 
-.day.visible-active-day {
+/* .day.visible-active-day {
     background-color: rgba(183, 29, 37, 0.916);
     color: white;
-}
+} */
 
 #main-banner {
     background-color: transparent;
@@ -202,3 +229,22 @@ body {
 
 }
 
+.border-time {
+    color: rgba(183, 29, 37, 0.916);
+}
+
+.first-hour-line {
+    flex: 1;
+    border-bottom: 1.5px solid rgba(183, 29, 37, 0.916);
+}
+
+.border-date {
+    color: rgba(183, 29, 37, 0.916);
+    flex-basis: 100%;
+}
+
+
+#main-view-section-daily {
+    height: 600px;
+    overflow-y: auto;
+}
